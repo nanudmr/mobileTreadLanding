@@ -16,7 +16,7 @@ contactForm.addEventListener("submit", (e) => {
     }
     console.log(emailData)
 
-    emailjs.send("service_sdpyg2g", "template_zdsd7jc", emailData)
+    emailjs.send("service_6u5fwci", "template_zdsd7jc", emailData)
     .then((res) => {
         console.log("SUCCESS", res.status, res.text)
     }).catch((err) => {
