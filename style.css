@@ -93,18 +93,39 @@ footer p{
     margin-top: 4.8rem;
 }
 
+.contact-form-container{
+    background-color: white;
+    border-radius: 1.6rem;
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:3.2rem 2.4rem;
+    max-width: 600px;
+    border: 1px solid grey;
+}
+.contact-form-container img{
+    max-width: 150px;
+    margin: 0 auto;
+}
+
 .contact-form{
     display: flex;
     flex-direction: column;
-    position: absolute;
-    background-color: white;
-    border: 1px solid red;
-    position: absolute;
-    top: 50%;
-    bottom: 50%;
-    left: 20px;
-    right: 20px;
+    gap: 3rem;
     text-align: center;
+    margin-top: 3.2rem;
+}
+
+.contact-form input{
+    font-size: 2rem;
+    border: 1px solid rgba(128, 128, 128, 0.399);
+    border-radius: 0.3rem;
+    padding-left: 0.8rem;
+    height: 3.2rem;
 }
 
 @media only screen and (min-width: 600px){
@@ -125,7 +146,7 @@ footer p{
         font-size: 9.6rem;
     }
 
-    button{
+    .content button{
         max-width: 36.8rem;
     }
 
