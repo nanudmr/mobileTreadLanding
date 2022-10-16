@@ -13,7 +13,7 @@ p{
 body{
     padding: 1.6rem 1.5rem 0.8rem 1.5rem;
     background-color: #FAFAFA;
-    background-image: url(/img/background.svg);
+    background-image: url(./img/background.svg);
     background-position: right;
     position: relative;
 }
