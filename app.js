@@ -33,9 +33,11 @@ const overlay = document.querySelector(".contact-form-container")
 
 
 request.addEventListener("click", () => {
-    overlay.classList.remove("hide")
+    overlay.style.visibility = "visible"
+    overlay.style.opacity = "1"
 })
 
 closeBtn.addEventListener("click", ()=>{
-    overlay.classList.add("hide")
+    overlay.style.visibility = "hidden"
+    overlay.style.opacity = "0"
 })
