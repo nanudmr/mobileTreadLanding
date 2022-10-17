@@ -118,8 +118,8 @@ footer p{
     justify-content: center;
     padding:3.2rem 2.4rem;
     max-width: 600px;
-    visibility: hidden;
-    opacity: 0;
+    /* visibility: hidden;
+    opacity: 0; */
     transition: all 0.3s;
 }
 
@@ -208,9 +208,16 @@ footer p{
         margin-top: 3.2rem;
     }
 
-
-
     .content .van img{
         max-width: 57.6rem;
+    }
+
+    .contact-form-container{
+        top: 8%;
+        right: 5%;
+        left: auto;
+        max-height: 80vh;
+        border-radius: 1.6rem;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
     }
 }

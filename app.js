@@ -19,11 +19,13 @@ contactForm.addEventListener("submit", (e) => {
     emailjs.send("service_6u5fwci", "template_zdsd7jc", emailData)
     .then((res) => {
         console.log("SUCCESS", res.status, res.text)
-        document.querySelector(".contact-form").style.display = "none"
+        contactForm.reset()
+        contactForm.style.display = "none"
 
         setTimeout(() => {
             closeRequest()
-        }, 2000);
+        }, 2000)
+
     }).catch((err) => {
         console.log(err)
     })
