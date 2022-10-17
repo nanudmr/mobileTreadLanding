@@ -24,3 +24,18 @@ contactForm.addEventListener("submit", (e) => {
     })
 
 })
+
+
+const request = document.querySelector(".request-call")
+const closeBtn = document.querySelector(".close")
+
+const overlay = document.querySelector(".contact-form-container")
+
+
+request.addEventListener("click", () => {
+    overlay.classList.remove("hide")
+})
+
+closeBtn.addEventListener("click", ()=>{
+    overlay.classList.add("hide")
+})

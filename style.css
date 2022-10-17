@@ -15,6 +15,7 @@ body{
     background-color: #FAFAFA;
     background-image: url(./img/background.svg);
     background-position: right;
+    background-repeat: no-repeat;
     position: relative;
 }
 
@@ -31,18 +32,28 @@ header span{
 }
 
 .content{
-    margin-top: 2.4rem;
+    margin-top: 3.2rem;
     text-align: center;
     display: flex;
     flex-direction: column;
+}
+
+.content p{
+    display: none;
 }
 
 .content span{
     font-weight: 500;
 }
 
+.buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
 
-.content button{
+
+.buttons button{
     width: 100%;
     background-color: red;
     padding: 1rem 0;
@@ -51,34 +62,35 @@ header span{
     font-family: "Lato", sans-serif;
     font-size: 2.4rem;
     color: white;
-    margin-top: 3.2rem;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-.info{
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-    margin-top: 2.4rem;
-}
-
-.info > div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.info > div p{
+.buttons a{
+    width: 100%;
+    text-decoration: none;
     font-size: 1.8rem;
+    color: black;
+    font-family: "Lato", sans-serif;
+    background-color: white;
+    border-radius: 1.6rem;
+    padding: 1rem 0;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
-.info > div img{
-    transform: translateY(-2px);
-    margin-right: 8px;
+.buttons a img{
+    max-width: 3.2rem;
+    margin-right: 0.8rem;
+    display: inline-block;
 }
+
 
 .content .van img{
     max-width: 100%;
-    margin-top: 6.4rem;
+    margin-top: 4.8rem;
 }
 
 footer{
@@ -95,37 +107,66 @@ footer p{
 
 .contact-form-container{
     background-color: white;
-    border-radius: 1.6rem;
     position: absolute;
-    left: 20px;
-    right: 20px;
-    top: 30%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding:3.2rem 2.4rem;
     max-width: 600px;
-    border: 1px solid grey;
 }
-.contact-form-container img{
-    max-width: 150px;
-    margin: 0 auto;
+
+.hide{
+    display: none;
 }
 
 .contact-form{
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    margin-top: 3.2rem;
+    position: relative;
+}
+
+.contact-form-container .close img{
+    max-width: 3.2rem;
+    position: absolute;
+    top: 2.4rem;
+    right: 1.5rem;
+}
+
+.contact-form-container img{
+    max-width: 19.2rem;
+    margin: 0 auto;
+}
+
+.contact-form-container p{
+    font-size: 3.2rem;
     text-align: center;
     margin-top: 3.2rem;
 }
 
+
 .contact-form input{
     font-size: 2rem;
-    border: 1px solid rgba(128, 128, 128, 0.399);
-    border-radius: 0.3rem;
+    border: 0;
+    border-radius: 1.6rem;
     padding-left: 0.8rem;
     height: 3.2rem;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    min-height: 4.8rem;
+}
+
+.contact-form button{
+    background-color: #E00010;
+    min-height: 4.8rem;
+    border-radius: 1.6rem;
+    border: 0;
+    font-size: 2.4rem;
+    color: white;
 }
 
 @media only screen and (min-width: 600px){
@@ -146,25 +187,24 @@ footer p{
         font-size: 9.6rem;
     }
 
-    .content button{
+    .content button, a{
         max-width: 36.8rem;
     }
 
     .content{
-        flex-direction: row;
-        margin-top: 3.2rem;
-        text-align: left;
-    }
-    .info{
-        margin-top: 3.2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
-    .info > div{
-        justify-content: left;
+    .content p{
+        grid-column: span 2;
+        text-align: left;
+        max-width: 57.6rem;
     }
+
+
 
     .content .van img{
         max-width: 57.6rem;
-        transform: translateY(-50px);
     }
 }
