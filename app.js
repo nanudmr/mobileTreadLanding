@@ -19,6 +19,11 @@ contactForm.addEventListener("submit", (e) => {
     emailjs.send("service_6u5fwci", "template_zdsd7jc", emailData)
     .then((res) => {
         console.log("SUCCESS", res.status, res.text)
+        document.querySelector(".contact-form").style.display = "none"
+
+        setTimeout(() => {
+            closeRequest()
+        }, 2000);
     }).catch((err) => {
         console.log(err)
     })
@@ -31,13 +36,21 @@ const closeBtn = document.querySelector(".close")
 
 const overlay = document.querySelector(".contact-form-container")
 
-
-request.addEventListener("click", () => {
+function openRequest(){
     overlay.style.visibility = "visible"
     overlay.style.opacity = "1"
+}
+
+function closeRequest(){
+    overlay.style.visibility = "hidden"
+    overlay.style.opacity = "0"
+}
+
+
+request.addEventListener("click", () => {
+    openRequest()
 })
 
 closeBtn.addEventListener("click", ()=>{
-    overlay.style.visibility = "hidden"
-    overlay.style.opacity = "0"
+    closeRequest()
 })
