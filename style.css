@@ -17,6 +17,7 @@ body{
     background-position: right;
     background-repeat: no-repeat;
     position: relative;
+    min-height: 100vh;
 }
 
 header{
@@ -200,6 +201,11 @@ footer p{
         grid-column: span 2;
         text-align: left;
         max-width: 57.6rem;
+        display: block;
+    }
+
+    .content .buttons{
+        margin-top: 3.2rem;
     }
 
 
